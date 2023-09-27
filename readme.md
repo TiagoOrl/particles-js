@@ -1,1 +1,1 @@
-##Particle system with speed, gravity and energy loss, using p5.js 
+# Particle system with speed, gravity and energy loss, using p5.js 
