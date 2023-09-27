@@ -8,8 +8,8 @@ function setup() {
   size = 600
   diam = 20
   createCanvas(size, size);
-  item1 = new Item(250, 40, size, size, diam, random(-10, 10), 0, 1.6, 0.5);
-  item2 = new Item(300, 40, size, size, diam, random(-10, 10), 0, 1.6, 0.5);
+  item1 = new Item(250, 40, size, size, diam, random(-10, 10), random(-3, 3), 1.6, 0.5);
+  item2 = new Item(300, 40, size, size, diam, random(-10, 10), random(-3, 3), 1.6, 0.5);
 }
 
 function draw() {
