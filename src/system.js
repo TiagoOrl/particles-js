@@ -1,11 +1,12 @@
 
 class System {
-    constructor(count, diam, limX, limY, loss = 0, grav = 0) {
+    constructor(count, diam, limX, limY, grav = 0, loss = 0, dragLoss = 0) {
         this.count = count
         this.diam = diam
         this.limX = limX
         this.limY = limY
         this.loss = loss
+        this.dragLoss = dragLoss
         this.grav = grav
         this.items = []
 
@@ -20,7 +21,7 @@ class System {
                 this.limX, this.limY, 
                 this.diam, 
                 xV, yV, 
-                this.loss, this.grav
+                this.loss, this.grav, this.dragLoss
             )
 
             this.items.push(item)
