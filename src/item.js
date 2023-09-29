@@ -1,7 +1,7 @@
 
 
 class Item {
-    constructor(x, y, limX, limY, diameter, vx = 0, vy = 0, loss = 0, grav = 0) {
+    constructor(x, y, limX, limY, diameter, vx = 0, vy = 0, loss = 0, grav = 0, dragLoss = 0) {
         this.x = x;
         this.y = y;
         this.vx = vx;
@@ -10,12 +10,24 @@ class Item {
         this.limY = limY;
         this.diameter = diameter;
         this.loss = loss;
+        this.dragLoss = dragLoss;
         this.grav = grav;
     }
 
     update() {
         if (this.grav != 0 && this.y + this.diameter / 2 < this.limY) {
                 this.vy += this.grav
+        }
+
+        if (this.dragLoss != 0) {
+            if (this.vx > 0)
+                this.vx -= this.dragLoss
+            if (this.vx < 0)
+                this.vx += this.dragLoss
+            if (this.vy > 0)
+                this.vy -= this.dragLoss
+            if (this.vy < 0)
+                this.vy += this.dragLoss
         }
                 
         if (this.x + this.diameter / 2 >= this.limX) {
