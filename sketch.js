@@ -11,7 +11,7 @@ function setup() {
   diam = 15
   count = 1800
   createCanvas(w, h);
-  system = new System(count, diam, w, h, 0, 0.8, 0.005)
+  system = new System(count, diam, w, h, 0, 0.8, 0.05)
 }
 
 function draw() {
@@ -26,8 +26,5 @@ function draw() {
 }
 
 function mouseClicked() {
-  system.pulse(
-    random(0, 10),
-    random(0, 10)
-  )
+  system.pulse(-10, 10)
 }

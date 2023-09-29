@@ -34,10 +34,10 @@ class System {
         })
     }
 
-    pulse(vx, vy)
+    pulse(min, max)
     {
         this.items.forEach(
-            (it) => it.addVel(vx, vy)
+            (it) => it.addVel(min, max)
         )
     }
 }

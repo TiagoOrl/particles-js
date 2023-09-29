@@ -60,7 +60,9 @@ class Item {
         this.y += this.vy;
     }
 
-    addVel(vx, vy) {
+    addVel(min, max) {
+        const vx = random(min, max)
+        const vy = random(min, max)
         if (this.vx < 0)
             this.vx -= vx;
         else
