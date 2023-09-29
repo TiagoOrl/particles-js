@@ -11,8 +11,8 @@ class System {
         this.items = []
 
         for (let index = 0; index < this.count; index++) {
-            const xPos = random(this.diam / 2, this.limX - this.diam / 2)
-            const yPos = random(this.diam / 2, this.limY - this.diam / 2)
+            const xPos = random(this.diam / 2, this.limX - this.diam / 2 - 1)
+            const yPos = random(this.diam / 2, this.limY - this.diam / 2 - 1)
             const xV = random(-10, 10)
             const yV = random(-10, 10)
 
