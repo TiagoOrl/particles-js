@@ -1,7 +1,7 @@
 
 
 class Item {
-    constructor(x, y, limX, limY, diameter, vx = 0, vy = 0, loss = 0, grav = 0, dragLoss = 0) {
+    constructor(x, y, limX, limY, diameter, color, vx = 0, vy = 0, loss = 0, grav = 0, dragLoss = 0) {
         this.x = x;
         this.y = y;
         this.vx = vx;
@@ -12,6 +12,7 @@ class Item {
         this.loss = loss;
         this.dragLoss = dragLoss;
         this.grav = grav;
+        this.color = color;
     }
 
     update() {

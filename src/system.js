@@ -16,10 +16,17 @@ class System {
             const xV = random(-10, 10)
             const yV = random(-10, 10)
 
+            const color = {
+                r: random(255),
+                g: random(255),
+                b: random(255)
+            }
+
             const item = new Item(
                 xPos, yPos, 
                 this.limX, this.limY, 
                 this.diam, 
+                color,
                 xV, yV, 
                 this.loss, this.grav, this.dragLoss
             )
