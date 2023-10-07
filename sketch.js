@@ -16,9 +16,9 @@ function setup() {
 
 function draw() {
   background(20);
-  fill(255);
   
   system.items.forEach((it) => {
+    fill(it.color.r, it.color.g, it.color.b)
     circle(it.x, it.y, it.diameter)
   })
 
